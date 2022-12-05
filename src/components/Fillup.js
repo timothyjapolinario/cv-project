@@ -56,7 +56,12 @@ class Fillup extends React.Component {
       const renderedExperienceList = experienceInfoList.map((info) => {
         return (
           <div key={info.id}>
-            <h2>Work Experience</h2>
+            <h2>
+              Work Experience{" "}
+              <span onClick={() => this.props.onExperienceDelete(info)}>
+                [Del]
+              </span>
+            </h2>
             <ExperienceEntry
               currentInfo={info}
               onExperienceInfoChange={this.props.onExperienceInfoChange}

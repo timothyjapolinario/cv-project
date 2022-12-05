@@ -93,6 +93,15 @@ class App extends React.Component {
       }),
     });
   };
+  deleteExperience = (toDelExp) => {
+    const updatedExpList = this.state.experienceInfo.filter(
+      (exp) => toDelExp.id !== exp.id
+    );
+    this.setState({
+      ...this.state,
+      experienceInfo: updatedExpList,
+    });
+  };
   updateExperienceInfo = (newExperience) => {
     const updatedExpList = this.state.experienceInfo.map((exp) => {
       if (exp.id === newExperience.id) {
@@ -116,6 +125,7 @@ class App extends React.Component {
             onExperienceInfoChange={this.updateExperienceInfo}
             onAddEducation={this.addEducation}
             onEducationDelete={this.deleteEducation}
+            onExperienceDelete={this.deleteExperience}
             onAddExperience={this.addExperience}
             currentInfo={this.state}
           />
