@@ -1,13 +1,21 @@
 #fullName {
   font-size: 30px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   color: rgb(1, 1, 77);
 }
 #contact {
+  width: 100%;
   gap: 5px;
   text-align: center;
   color: rgb(18, 71, 218);
   display: flex;
   margin-top: 10px;
+}
+#contact * {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: calc((100%) / 4);
 }
 #objective {
   overflow-wrap: break-word;
