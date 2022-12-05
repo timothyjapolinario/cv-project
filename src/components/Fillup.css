@@ -1,0 +1,23 @@
+.Fillup {
+  flex-direction: column;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+  background-color: white;
+  width: 595px;
+  position: fixed;
+  display: flex;
+  height: 90vh;
+}
+.entryList {
+  overflow-y: scroll;
+  height: 70%;
+  width: 100%;
+}
+.addEntryButton {
+  margin-top: 10px;
+  width: 96%;
+  text-align: center;
+  background-color: rgb(110, 255, 110);
+}

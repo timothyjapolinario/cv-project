@@ -1,0 +1,8 @@
+.CV {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  min-width: 595px;
+  height: 842px;
+  border: 1px solid black;
+}

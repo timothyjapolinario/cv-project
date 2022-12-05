@@ -1,0 +1,16 @@
+.Navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: calc(100% - 40px);
+  position: absolute;
+  bottom: 15px;
+  justify-content: center;
+  justify-items: center;
+}
+.navButton {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 4px;
+  width: 100px;
+  text-align: center;
+}
