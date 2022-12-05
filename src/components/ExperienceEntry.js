@@ -4,11 +4,7 @@ class ExperienceEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: props.currentInfo.id,
-      jobTitle: "",
-      jobCompany: "",
-      jobYearStart: "",
-      jobYearEnd: "",
+      ...props.currentInfo,
     };
   }
   handler = (e) => {

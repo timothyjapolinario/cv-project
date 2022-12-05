@@ -4,12 +4,7 @@ class EducationEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: props.currentInfo.id,
-      schoolDegree: "",
-      schoolName: "",
-      schoolGPA: "",
-      schoolYearStart: "",
-      schoolYearEnd: "",
+      ...props.currentInfo,
     };
   }
   handler = (e) => {

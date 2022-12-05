@@ -29,7 +29,13 @@ class Fillup extends React.Component {
       const renderedEducList = educationInfoList.map((info) => {
         return (
           <div key={info.id}>
-            <h2>Education</h2>
+            <h2>
+              Education
+              <span onClick={() => this.props.onEducationDelete(info)}>
+                [Del]
+              </span>
+            </h2>
+
             <EducationEntry
               currentInfo={info}
               onEducationInfoChange={this.props.onEducationInfoChange}

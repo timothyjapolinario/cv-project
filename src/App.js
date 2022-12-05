@@ -54,15 +54,10 @@ class App extends React.Component {
       return educ;
     });
 
-    this.setState(
-      {
-        ...this.state,
-        educationInfo: updatedEducList,
-      },
-      () => {
-        console.log(this.state);
-      }
-    );
+    this.setState({
+      ...this.state,
+      educationInfo: updatedEducList,
+    });
   };
   addEducation = () => {
     this.setState({
@@ -75,6 +70,15 @@ class App extends React.Component {
         schoolYearStart: "",
         schoolYearEnd: "",
       }),
+    });
+  };
+  deleteEducation = (toDelEd) => {
+    const updatedEducList = this.state.educationInfo.filter(
+      (educ) => toDelEd.id !== educ.id
+    );
+    this.setState({
+      ...this.state,
+      educationInfo: updatedEducList,
     });
   };
   addExperience = (newExperience) => {
@@ -111,6 +115,7 @@ class App extends React.Component {
             onEducationInfoChange={this.updateEducationInfo}
             onExperienceInfoChange={this.updateExperienceInfo}
             onAddEducation={this.addEducation}
+            onEducationDelete={this.deleteEducation}
             onAddExperience={this.addExperience}
             currentInfo={this.state}
           />
