@@ -9,9 +9,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       personalInfo: {
-        firstName: "john",
-        middleName: "llyod",
-        lastName: "cruz",
+        firstName: "John",
+        middleName: "Llyod",
+        lastName: "Cruz",
+        email: "JohnLloydCruz@gmail.com",
       },
       educationInfo: [
         {
@@ -34,17 +35,10 @@ class App extends React.Component {
       ],
     };
   }
-  updatePersonalInfo = (firstName, middleName, lastName) => {
-    console.log("updating personal info!");
-    console.log(firstName);
+  updatePersonalInfo = (updatedPersonalInfo) => {
     this.setState({
-      personalInfo: {
-        firstName: firstName,
-        middleName: middleName,
-        lastName: lastName,
-      },
-      educationInfo: this.state.educationInfo,
-      experienceInfo: this.state.experienceInfo,
+      ...this.state,
+      personalInfo: updatedPersonalInfo,
     });
   };
   updateEducationInfo = (newEducation) => {

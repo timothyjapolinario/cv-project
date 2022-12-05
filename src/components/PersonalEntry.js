@@ -4,9 +4,7 @@ class PersonalEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: this.props.currentInfo.personalInfo.firstName,
-      middleName: this.props.currentInfo.personalInfo.middleName,
-      lastName: this.props.currentInfo.personalInfo.lastName,
+      ...this.props.currentInfo.personalInfo,
     };
   }
   handler = (e) => {
@@ -16,8 +14,7 @@ class PersonalEntry extends React.Component {
         [e.target.name]: e.target.value,
       },
       () => {
-        const { firstName, middleName, lastName } = this.state;
-        this.props.onChange(firstName, middleName, lastName);
+        this.props.onChange(this.state);
       }
     );
   };
