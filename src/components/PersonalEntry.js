@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./PersonalEntry.css";
 class PersonalEntry extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +49,47 @@ class PersonalEntry extends React.Component {
               onChange={this.handler}
               value={this.state.lastName}
             ></input>
+          </div>
+
+          <div>
+            <label htmlFor="email-input">Email</label>
+            <input
+              id="email-input"
+              name="email"
+              onChange={this.handler}
+              value={this.state.email}
+            ></input>
+          </div>
+
+          <div>
+            <label htmlFor="phone-input">Phone</label>
+            <input
+              id="phone-input"
+              name="phone"
+              onChange={this.handler}
+              value={this.state.phone}
+            ></input>
+          </div>
+
+          <div>
+            <label htmlFor="address-input">Address</label>
+            <input
+              id="address-input"
+              name="address"
+              onChange={this.handler}
+              value={this.state.address}
+            ></input>
+          </div>
+
+          <div>
+            <label htmlFor="objective-input">Objective</label>
+            <textarea
+              id="objective-input"
+              name="objective"
+              onChange={this.handler}
+              value={this.state.objective}
+              maxLength="250"
+            ></textarea>
           </div>
         </form>
       </div>
