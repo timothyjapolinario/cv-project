@@ -4,7 +4,6 @@ import {
   faBriefcase,
   faPerson,
 } from "@fortawesome/free-solid-svg-icons";
-import fontawesome from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./Navigation.css";
 class Navigation extends React.Component {
@@ -15,24 +14,52 @@ class Navigation extends React.Component {
     };
   }
 
-  renderPageIndicator = () => {
-    return <div></div>;
+  renderNavIndicator = () => {
+    return (
+      <div className="navIndicators">
+        <FontAwesomeIcon
+          icon={faPerson}
+          className={
+            (this.props.currentPageIndex === 1 ? "activeNav " : "") +
+            "navIndicator"
+          }
+        />
+        <FontAwesomeIcon
+          icon={faBook}
+          className={
+            (this.props.currentPageIndex === 2 ? "activeNav " : "") +
+            "navIndicator"
+          }
+        />
+        <FontAwesomeIcon
+          icon={faBriefcase}
+          className={
+            (this.props.currentPageIndex === 3 ? "activeNav " : "") +
+            "navIndicator"
+          }
+        />
+      </div>
+    );
   };
   render() {
     return (
       <div className="Navigation">
-        <FontAwesomeIcon icon={faPerson} />
-        <FontAwesomeIcon icon={faBook} />
-        <FontAwesomeIcon icon={faBriefcase} />
-        <div
-          className="navButton"
-          id="previous-button"
-          onClick={this.props.onPrevious}
-        >
-          Previous
-        </div>
-        <div className="navButton" id="next-button" onClick={this.props.onNext}>
-          Next
+        <div className="navigationButtonList">
+          <div
+            className="navButton"
+            id="previous-button"
+            onClick={this.props.onPrevious}
+          >
+            Previous
+          </div>
+          {this.renderNavIndicator()}
+          <div
+            className="navButton"
+            id="next-button"
+            onClick={this.props.onNext}
+          >
+            Next
+          </div>
         </div>
       </div>
     );

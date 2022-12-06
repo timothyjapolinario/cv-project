@@ -7,8 +7,12 @@
   border: 1px solid black;
   padding: 40px;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .CV * {
   width: 100%;
+}
+.CV::-webkit-scrollbar {
+  display: none;
 }

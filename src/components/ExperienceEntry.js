@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./ExperienceEntry.css";
 class ExperienceEntry extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +21,7 @@ class ExperienceEntry extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="experienceEntry">
         <form>
           <div>
             <label htmlFor="job-title">Job Title</label>

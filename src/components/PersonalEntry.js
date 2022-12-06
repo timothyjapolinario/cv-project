@@ -20,7 +20,7 @@ class PersonalEntry extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="personalEntry">
         <form>
           <div>
             <label htmlFor="first-name-input">First Name</label>

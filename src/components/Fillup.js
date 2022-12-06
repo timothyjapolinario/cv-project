@@ -4,6 +4,8 @@ import ExperienceEntry from "./ExperienceEntry";
 import "./Fillup.css";
 import Navigation from "./Navigation";
 import EducationEntry from "./EducationEntry";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 class Fillup extends React.Component {
   constructor(props) {
     super(props);
@@ -29,10 +31,10 @@ class Fillup extends React.Component {
       const renderedEducList = educationInfoList.map((info) => {
         return (
           <div key={info.id}>
-            <h2>
+            <h2 className="educationEntryHeader">
               Education
               <span onClick={() => this.props.onEducationDelete(info)}>
-                [Del]
+                <FontAwesomeIcon icon={faTrash} />
               </span>
             </h2>
 
@@ -56,10 +58,10 @@ class Fillup extends React.Component {
       const renderedExperienceList = experienceInfoList.map((info) => {
         return (
           <div key={info.id}>
-            <h2>
+            <h2 className="experienceEntryHeader">
               Work Experience{" "}
               <span onClick={() => this.props.onExperienceDelete(info)}>
-                [Del]
+                <FontAwesomeIcon icon={faTrash} />
               </span>
             </h2>
             <ExperienceEntry
