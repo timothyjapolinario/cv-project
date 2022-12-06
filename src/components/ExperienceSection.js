@@ -6,11 +6,12 @@ class ExperienceSection extends React.Component {
 
   render() {
     console.log(this.props);
-    const { jobCompany, jobTitle, jobYearStart, jobYearEnd } =
+    const { jobCompany, jobTitle, jobDescription, jobYearStart, jobYearEnd } =
       this.props.experienceInfo;
     return (
       <div>
         <p>{jobCompany}</p>
+        <p>{jobDescription}</p>
         <p>{jobTitle}</p>
         <p>
           {jobYearStart} - {jobYearEnd}

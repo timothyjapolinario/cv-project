@@ -110,7 +110,11 @@ class Fillup extends React.Component {
         <h1>Fill-Up Form</h1>
         <div></div>
         <div className="entryList">{this.getCurrentPage()}</div>
-        <Navigation onPrevious={this.getPrevious} onNext={this.getNext} />
+        <Navigation
+          onPrevious={this.getPrevious}
+          onNext={this.getNext}
+          currentPageIndex={this.state.currentPageIndex}
+        />
       </div>
     );
   }

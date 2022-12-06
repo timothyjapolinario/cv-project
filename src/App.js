@@ -22,20 +22,22 @@ class App extends React.Component {
       educationInfo: [
         {
           id: uniqid(),
-          schoolDegree: "",
-          schoolName: "",
-          schoolGPA: "",
-          schoolYearStart: "",
-          schoolYearEnd: "",
+          schoolDegree: "Computer Science",
+          schoolName: "University of the Cordilleras",
+          schoolGPA: "1.0",
+          schoolYearStart: "2019",
+          schoolYearEnd: "2023",
         },
       ],
       experienceInfo: [
         {
           id: uniqid(),
-          jobTitle: "",
-          jobCompany: "",
-          jobYearStart: "",
-          jobYearEnd: "",
+          jobTitle: "Software Engineer",
+          jobDescription:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+          jobCompany: "Google",
+          jobYearStart: "2022",
+          jobYearEnd: "Current",
         },
       ],
     };
