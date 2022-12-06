@@ -9,13 +9,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       personalInfo: {
-        firstName: "Timothy Jay",
-        middleName: "Toliongco",
-        lastName: "Apolinario",
-        email: "jjapolinario@gmail.com",
-        phone: "09528593913",
+        firstName: "John Lloyd",
+        middleName: "Gomez",
+        lastName: "Padilla",
+        email: "jlpadilla@gmail.com",
+        phone: "124860684",
         address: "Tokyo, Japan",
-        linkedIn: "Linked In link",
+        linkedIn: "LinkedIn link",
         objective:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       },
@@ -23,7 +23,7 @@ class App extends React.Component {
         {
           id: uniqid(),
           schoolDegree: "Computer Science",
-          schoolName: "University of the Cordilleras",
+          schoolName: "Harvard University",
           schoolGPA: "1.0",
           schoolYearStart: "2019",
           schoolYearEnd: "2023",
@@ -34,7 +34,7 @@ class App extends React.Component {
           id: uniqid(),
           jobTitle: "Software Engineer",
           jobDescription:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
           jobCompany: "Google",
           jobYearStart: "2022",
           jobYearEnd: "Current",
