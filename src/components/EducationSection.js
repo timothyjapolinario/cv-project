@@ -1,4 +1,5 @@
 import React from "react";
+import "./EducationSection.css";
 class EducationSection extends React.Component {
   constructor(props) {
     super(props);
@@ -14,13 +15,18 @@ class EducationSection extends React.Component {
       schoolYearEnd,
     } = this.props.educationInfo;
     return (
-      <div>
-        <p>{schoolDegree}</p>
-        <p>{schoolGPA}</p>
-        <p>{schoolName}</p>
-        <p>
-          {schoolYearStart} - {schoolYearEnd}
-        </p>
+      <div className="educationSection">
+        <div>
+          <p className="duration">
+            {schoolYearStart} - {schoolYearEnd}
+          </p>
+        </div>
+        <div>
+          <p>
+            <span className="schoolDegree">{schoolDegree}</span> | {schoolName}
+          </p>
+          <p>GPA : {schoolGPA}</p>
+        </div>
       </div>
     );
   }

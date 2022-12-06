@@ -30,9 +30,19 @@ class CV extends React.Component {
     );
     return (
       <div className="CV" id="CV">
-        <PersonalSection personalInfo={this.props.userInfo.personalInfo} />
-        {renderedEducationList}
-        {renderedExperienceList}
+        <div>
+          <PersonalSection personalInfo={this.props.userInfo.personalInfo} />
+        </div>
+
+        <div>
+          <h3 className="sectionHeader">Experience</h3>
+          {renderedExperienceList}
+        </div>
+
+        <div>
+          <h3 className="sectionHeader">Education</h3>
+          {renderedEducationList}
+        </div>
       </div>
     );
   }

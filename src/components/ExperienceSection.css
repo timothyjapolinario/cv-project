@@ -1,0 +1,11 @@
+.experienceSection {
+  display: grid;
+  grid-template-columns: 1fr 2.7fr;
+}
+.jobTitle {
+  font-weight: bold;
+}
+
+.duration {
+  font-weight: bold;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./ExperienceSection.css";
 class ExperienceSection extends React.Component {
   constructor(props) {
     super(props);
@@ -9,13 +10,18 @@ class ExperienceSection extends React.Component {
     const { jobCompany, jobTitle, jobDescription, jobYearStart, jobYearEnd } =
       this.props.experienceInfo;
     return (
-      <div>
-        <p>{jobCompany}</p>
-        <p>{jobDescription}</p>
-        <p>{jobTitle}</p>
-        <p>
-          {jobYearStart} - {jobYearEnd}
-        </p>
+      <div className="experienceSection">
+        <div>
+          <p className="duration">
+            {jobYearStart} - {jobYearEnd}
+          </p>
+        </div>
+        <div>
+          <p>
+            <span className="jobTitle">{jobTitle + "   "}</span> | {jobCompany}
+          </p>
+          <p>{jobDescription}</p>
+        </div>
       </div>
     );
   }

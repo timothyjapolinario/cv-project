@@ -29,7 +29,7 @@ class PersonalSection extends React.Component {
           <div id="linkedIn">[{linkedIn}]</div>
         </div>
         <div>
-          <h3>Objective</h3>
+          <h3 className="sectionHeader">Objective</h3>
           <p id="objective">{objective}</p>
         </div>
       </div>

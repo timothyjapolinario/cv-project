@@ -16,3 +16,8 @@
 .CV::-webkit-scrollbar {
   display: none;
 }
+
+.sectionHeader {
+  border-bottom: 2px solid rgb(65, 65, 65);
+  width: 100%;
+}

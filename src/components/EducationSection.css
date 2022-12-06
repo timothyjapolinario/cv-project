@@ -1,0 +1,11 @@
+.educationSection {
+  display: grid;
+  grid-template-columns: 1fr 2.7fr;
+}
+.schoolDegree {
+  font-weight: bold;
+}
+
+.duration {
+  font-weight: bold;
+}
